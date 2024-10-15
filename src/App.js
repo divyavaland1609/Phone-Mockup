@@ -32,13 +32,13 @@ import msg from "../src/image/msg.svg";
 import camera from "../src/image/camera.svg";
 import call from "../src/image/call.svg";
 import zxc from "../src/image/switch.svg";
-import abc from"../src/image/volume.svg";
+import abc from "../src/image/volume.svg";
 
 const { Header, Footer, Content } = Layout;
 const { TextArea } = Input;
 
 function App() {
-  const [message, setMessage] = useState("");
+  const [message] = useState("");
 
   const messages = [
     {
@@ -174,8 +174,11 @@ function App() {
           backgroundColor: "#f0f2f5",
         }}
       >
-          {/* <Image src={zxc} width={20}/> */}
-          <Image src={abc} width={4} style={{position:"absolute",top:-310}}/>
+        <Image
+          src={abc}
+          width={4}
+          style={{ position: "absolute", top: -310 }}
+        />
 
         <Card
           bodyStyle={{ padding: "5px" }}
@@ -184,9 +187,8 @@ function App() {
             justifyContent: "center",
             alignItems: "center",
           }}
-
         >
-           <Card
+          <Card
             bodyStyle={{ padding: "1px" }}
             type="inner"
             style={{
@@ -203,7 +205,7 @@ function App() {
                 flexDirection: "column",
                 height: "100%",
                 width: "100%",
-                minHeight:"95vh"
+                minHeight: "95vh",
               }}
             >
               {/* Sticky Header */}
@@ -368,10 +370,12 @@ function App() {
               </Footer>
             </Layout>
           </Card>
-
         </Card>
-          <Image src={zxc} width={4} style={{position:"absolute",top:-180}}/>
-
+        <Image
+          src={zxc}
+          width={4}
+          style={{ position: "absolute", top: -180 }}
+        />
       </div>
     </ConfigProvider>
   );
